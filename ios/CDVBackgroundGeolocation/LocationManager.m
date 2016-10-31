@@ -385,7 +385,7 @@ enum {
 {
     // Sanity-check the duration of last bgTask:  If greater than 30s, kill it.
     if (bgTask != UIBackgroundTaskInvalid) {
-        if (-[lastBgTaskAt timeIntervalSinceNow] > 3.0) {
+        if (-[lastBgTaskAt timeIntervalSinceNow] > 0.5) {
             DDLogWarn(@"TESTE");
             DDLogWarn(@"LocationManager#flushQueue has to kill an out-standing background-task!");
             if (_config.isDebugging) {
